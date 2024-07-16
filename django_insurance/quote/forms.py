@@ -3,30 +3,30 @@ from django import forms
 
 class Customer_Form(forms.Form):
     first_name = forms.CharField(
-        max_length=20, label="What is your first name?", required=True
+        max_length=20, label="First Name:", required=True
     )
-    middle_name = forms.CharField(
-        max_length=20, label="What is your middle name?"
+    middle_initial = forms.CharField(
+        max_length=20, label="M.I.:"
     )
     last_name = forms.CharField(
-        max_length=20, label="What is your last name?", required=True
+        max_length=20, label="Last Name:", required=True
     )
     suffix = forms.CharField(
-        max_length=5, label="If you have a suffix in your name what is it?", required=False
+        max_length=5, label="Suffix:", required=False
     )
     address = forms.CharField(
-        max_length=50, label="What is your address?", required=True
+        max_length=50, label="Street Address:", required=True
     )
-    zip_code = forms.IntegerField(label="What is your zip code?")
+    zip_code = forms.IntegerField(label="Zip:")
     # dashes between the number
     telephone_number = forms.IntegerField(
-        required=True, label="What is your phone number?"
+        required=True, label="Telephone:"
     )
     email = forms.EmailField(
-        max_length=50, required=False, label="What is your email address?"
+        max_length=50, required=False, label="Email:"
     )
-    date_of_birth = forms.DateField(required=True, label="What is your date of birth?")
-    home_ownership = forms.CharField(label="Do you own or rent your home?")
+    date_of_birth = forms.DateField(required=True, label="Date of Birth")
+    home_ownership = forms.CharField(label="Do you Rent or Own Your Home?")
 
 
 class Vehicle_Form(forms.Form):
