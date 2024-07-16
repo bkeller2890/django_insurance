@@ -6,7 +6,7 @@ class Customer_Form(forms.Form):
         max_length=20, label="First Name:", required=True
     )
     middle_initial = forms.CharField(
-        max_length=20, label="M.I.:"
+        max_length=1, label="M.I.:"
     )
     last_name = forms.CharField(
         max_length=20, label="Last Name:", required=True
